@@ -15,7 +15,7 @@ To make MailMonkey interoperate seamlessly with our customers' Salesforce, we wa
 2. **Create Leads**: An integration which creates a new Lead in Salesforce whenever somebody replies to to a MailMonkey email campaign.
 3. **Subscribe to Lead Conversions**: An integration which inserts Salesforce Leads into the "customer" audience segment in MailMonkey whenever a Lead's status becomes "converted" in Salesforce.
 
-Let's create a folder called source, with a file inside called amp.yaml, this is where we will define our integrations.
+Let's create a folder called `source`, with a file inside called `amp.yaml`, this is where we will define our integrations.
 
 ### Read Contacts and Leads
 
@@ -30,7 +30,7 @@ integrations:
       standardObjects:
         - objectName: contact
           destination: contactWebhook
-          schedule: '*/30 * * * *' # every 30 minutes
+          schedule: "*/30 * * * *" # every 30 minutes
           # Always read these fields
           requiredFields:
             - fieldName: firstName
@@ -41,7 +41,7 @@ integrations:
             - fieldName: salutation
         - objectName: leads
           destination: leadsWebhook
-          schedule: '*/30 * * * *' # every 30 minutes
+          schedule: "*/30 * * * *" # every 30 minutes
           requiredFields:
             - fieldName: firstName
             - fieldName: lastName
@@ -115,12 +115,12 @@ We decide that we want each integration to have its own page, and we are going t
 Here's a simplified version of what our frontend code would look like:
 
 ```jsx title="TypeScript"
-import { AmpersandProvider, InstallIntegration } from '@amp-labs/react';
-import { Routes, Route } from 'react-router-dom';
+import { AmpersandProvider, InstallIntegration } from "@amp-labs/react";
+import { Routes, Route } from "react-router-dom";
 
 const options = {
-  projectId: 'PROJECT_ID', // Your Ampersand project ID.
-  apiKey: 'API_KEY', // Your Ampersand API key.
+  projectId: "PROJECT_ID", // Your Ampersand project ID.
+  apiKey: "API_KEY", // Your Ampersand API key.
 };
 
 function App() {

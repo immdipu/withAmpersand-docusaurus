@@ -14,13 +14,14 @@ const sidebars: SidebarsConfig = {
   docs: [
     "index",
     "quick-start",
+
     {
       type: "category",
       label: "Defining-integrations",
       collapsed: false,
       items: [
         "defining-integrations/index",
-        "defining-integrations/read-actions",
+        "read-actions",
         "defining-integrations/write-actions",
         "defining-integrations/proxy-actions",
         "defining-integrations/subscribe-actions",

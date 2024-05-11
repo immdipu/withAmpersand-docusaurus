@@ -4,9 +4,6 @@ sidebar_label: Overview
 slug: /
 ---
 
-import DocsCard from '@components/global/DocsCard';
-import DocsCards from '@components/global/DocsCards';
-
 ---
 
 [Ampersand](https://www.withampersand.com) is a config-first platform for SaaS builders who are creatinguser-facing integrations. We allow you to:
@@ -19,10 +16,6 @@ Here's an overview of the Ampersand platform:
 
 ![Ampersand Overview](https://files.readme.io/6191436-e22b8d3-Group_4.png) <div align="center"><i>The Ampersand platform</i></div>
 
----
-
----
-
 The key components include:
 
 - **Manifest file**: an `amp.yaml` file, where you define all your integrations: API to connect to, type of data, configuration values available to your end users, and how you'd like to connect it to the rest of your stack (via direct connection to your data store, API calls, or webhooks).
@@ -30,7 +23,7 @@ The key components include:
 
 :::note[🗺️ On the roadmap]
 
-&nbsp; &nbsp; &nbsp; Self-hosted version of the Ampersand Integration Service
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Self-hosted version of the Ampersand Integration Service
 
 :::
 
