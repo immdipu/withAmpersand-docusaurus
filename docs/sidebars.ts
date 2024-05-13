@@ -18,10 +18,14 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Defining-integrations",
-      collapsed: false,
+      link: {
+        type: "doc",
+        id: "defining-integrations/index",
+      },
+      collapsed: true,
+
       items: [
-        "defining-integrations/index",
-        "read-actions",
+        "defining-integrations/read-actions",
         "defining-integrations/write-actions",
         "defining-integrations/proxy-actions",
         "defining-integrations/subscribe-actions",

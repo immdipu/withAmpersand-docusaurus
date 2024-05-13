@@ -74,7 +74,7 @@ Once a customer installs our integration, MailMonkey's application backend will 
 
 ### Subscribe to Lead Conversions
 
-Our third integration will have [Subscribe Actions](/docs/subscribe-actions). We want to watch for updates to the isConverted field of Salesforce leads, and Ampersand will make a POST request to our webhook whenever that happens. We'll define a Destination for our webhook. Once our webhook receives a request, our application code will add that lead to a customer audience segment within MailMonkey.
+Our third integration will have [Subscribe Actions](/docs/subscribe-actions). We want to watch for updates to the `isConverted` field of Salesforce leads, and Ampersand will make a POST request to our webhook whenever that happens. We'll define a [Destination](/docs/destinations) for our webhook. Once our webhook receives a request, our application code will add that lead to a customer audience segment within MailMonkey.
 
 ```yaml title="yaml"
 - name: subscribeToLeadConversions
@@ -108,9 +108,9 @@ amp deploy source --project=my-project-id
 
 ### Embed UI components
 
-Next, we will use Ampersand's react library to embed ready-made UI components into our app, so that our customers can start using our shiny new integrations! We'll use the InstallIntegration component for the auth flow and configuration steps. Check out [Embed UI components](/docs/embeddable-ui-components) for more details on this component and other components to help your users set up and manage their integrations.
+Next, we will use Ampersand's react library to embed ready-made UI components into our app, so that our customers can start using our shiny new integrations! We'll use the `InstallIntegration` component for the auth flow and configuration steps. Check out [Embed UI components](/docs/embeddable-ui-components) for more details on this component and other components to help your users set up and manage their integrations.
 
-We decide that we want each integration to have its own page, and we are going to use react-router-dom to help us with page routing.
+We decide that we want each integration to have its own page, and we are going to use `react-router-dom` to help us with page routing.
 
 Here's a simplified version of what our frontend code would look like:
 

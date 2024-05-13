@@ -3,33 +3,167 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* You can override the default Infima variables here. */
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  scroll-padding-top: var(--ifm-navbar-height);
+
+
+
+}
+
+.menu {
+  font-weight: var(--ifm-font-weight-normal);
+  font-size: 95%;
+}
+
+.tocList {
+  --ifm-list-item-margin: 0.5rem;
+  --ifm-heading-margin-top: 2rem;
+}
+
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 80%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-color-primary: #31b1e8;
+  /* #146ee6; */
+  --ifm-menu-color: #525151;
+  --ifm-font-color-base: rgba(30, 32, 34, 1);
+  --ifm-navbar-background-color: white;
+  --ifm-navbar-link-color: #333;
+  --ifm-navbar-height: 5.8rem;
+  --ifm-font-family-base: Inter, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
+  --ifm-code-name-highlight: #84488D;
+  --ifm-font-size-base: 95%;
+  --ifm-heading-font-weight: var(--ifm-font-weight-normal);
+  --ifm-toc-border-color: #dadde1b8;
+  --ifm-list-paragraph-margin: 0px;
+  --ifm-list-left-padding: 2rem;
+  --ifm-list-right-padding: 1rem;
+}
+
+.menu {
+  padding-top: 2rem !important;
+}
+
+.menu__list {
+  padding-left: var(--ifm-list-left-padding);
+  padding-right: var(--ifm-list-right-padding);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
+.menu__link--sublist:after {
+  background: var(--ifm-menu-link-sublist-icon) 20% / 2rem 1.2rem;
+}
+
+.markdown li>p {
+  margin: 0;
+}
+
+.menu__caret:before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 2rem 1.2rem;
+}
+
+.navbar--primary {
+  --ifm-navbar-background-color: white;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+html[data-theme="dark"] {
+  --ifm-color-primary: #92c1ff;
+  --ifm-menu-color: #e6e6e6;
+  --ifm-font-color-base: #e6e6e6;
+  --ifm-navbar-background-color: linear-gradient(to bottom, #242E33, #164967);
+  --ifm-navbar-link-color: #aaa;
+  --ifm-code-name-highlight: #A972B1;
+  --ifm-toc-border-color: #333;
+  --ifm-background-color: #242E33;
+  --ifm-code-background: #303b42;
+  --prism-background-color: #303b42;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, #242E33, #164967);
+  height: var(--ifm-navbar-height);
+}
+
+
+.language-yaml {
+  background-color: var(--ifm-code-background) !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin-left: 64px;
+  }
+
+  article {
+    margin-right: 48px;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  .container {
+    margin-left: 32px;
+  }
+
+  article {
+    margin-right: 24px;
+  }
+}
+
+
+
+
+.navbar__logo {
+  height: 3rem;
+}
+
+html[data-theme="light"] aside {
+  background: white;
+}
+
+p>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html[data-theme="dark"] p>img {
+  background-color: rgb(255, 255, 255);
+}
+
+.dsla-search-wrapper {
+  margin-right: var(--aa-spacing);
+  --aa-background-color-rgb: 24, 28, 31;
+  --aa-background-color-alpha: 1;
+  --aa-text-color-rgb: 200, 200, 200;
+  --aa-muted-color-rgb: 200, 200, 200;
+  --aa-input-background-color-rgb: 24, 28, 31;
+  --aa-input-background-color-alpha: 1;
+  --aa-primary-color-rgb: 200, 200, 200;
+}
+
+.dsla-search-wrapper .aa-DetachedSearchButton {
+  border: none;
+}
+
+/* Algolia search */
+[data-theme="light"] .DocSearch {
+  --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-highlight-color: var(--ifm-color-primary);
 }
 
 
 pre[class*="language-"] {
   white-space: pre-wrap;
+}
+
+pre code {
+  background-color: var(--ifm-code-background);
 }

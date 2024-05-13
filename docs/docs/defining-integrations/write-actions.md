@@ -1,5 +1,6 @@
 ---
 title: "Write actions"
+slug: /write-actions
 ---
 
 A write action writes data to your customer's SaaS whenever you make an API request to us. To define a write action, add `write` as a key in your integration defined in `amp.yaml`, and add a list of standard and custom objects you want to write to.
@@ -79,7 +80,7 @@ For updates, upserts, and deletes, you'll need to supply a `primaryKey`. This is
 
 Salesforce bulk writes and bulk deletes expect data in CSV format. A few things to note regarding the CSV format when writing to Salesforce:
 
-- Column headers must match the field names of the object in Salesforce. Please note that Salesforce requires `\_\_c` at the end of all custom fields.
+- Column headers must match the field names of the object in Salesforce. Please note that Salesforce requires `__c` at the end of all custom fields.
 - Line endings must be `LF`, not `CRLF`. Unix-based systems and most libraries for generating CSV files would default to `LF` line endings already.
 - Dates and timestamps must follow [Salesforce's specified format](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_valid_date_formats.htm).
 
@@ -110,7 +111,7 @@ You can directly add CSV data to the `recordsCSV` field of the request body. The
 
 In the `recordsURL` field of the request body, you can provide a public URL where the Ampersand server can make a GET request to retrieve a CSV file (max size of file is 150 MiB). The URL should start with `https://`.
 
-Here is an example request for bulk upsert using the CSV file above, if the object to be written to is a custom object with the name `tactics\_\_c`. (Please note that `primaryKey` must match one of the column names from the CSV file.)
+Here is an example request for bulk upsert using the CSV file above, if the object to be written to is a custom object with the name `tactics__c`. (Please note that `primaryKey` must match one of the column names from the CSV file.)
 
 ```json
 curl --location 'https://write.withampersand.com/v1/projects/2234wf/integrations/23rsdf32/objects/tactics__c' \
@@ -173,7 +174,7 @@ curl -X PUT -H "Content-Type: text/csv" --upload-file data.csv "$URL"
 
 The response from the [GenerateUploadURL](reference/generateuploadurl-1) endpoint from step 1 should include a reference field which is a URL that starts with `gs://`. Put this URL in the `recordsURL` field of a bulk write request.
 
-Here is an example request for bulk upsert, if the object to be written to is a custom object with the name `tactics\_\_c`. (Please note that `primaryKey` must match one of the column names from the CSV file that was uploaded)
+Here is an example request for bulk upsert, if the object to be written to is a custom object with the name `tactics__c`. (Please note that `primaryKey` must match one of the column names from the CSV file that was uploaded)
 
 ```json
 curl --location 'https://write.withampersand.com/v1/projects/2234wf/integrations/23rsdf32/objects/tactics__c' \

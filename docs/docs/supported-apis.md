@@ -8,7 +8,7 @@ We support [standard objects](https://developer.salesforce.com/docs/atlas.en-us.
 
 ### HubSpot
 
-We support standard objects (everything listed in this page under "Objects") and custom objects within Hubspot.
+We support standard objects (everything listed in [this page](https://developers.hubspot.com/docs/api/crm/understanding-the-crm) under "Objects") and custom objects within Hubspot.
 
 ### Other APIs
 

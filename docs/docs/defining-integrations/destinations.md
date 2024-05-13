@@ -1,5 +1,6 @@
 ---
 title: "Destinations"
+slug: /destinations
 ---
 
 We currently support webhooks as destinations for read actions and subscribe actions. During the Ampersand onboarding process, you will provide the URLs for your webhooks in addition to:

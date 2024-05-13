@@ -1,5 +1,8 @@
 ---
 title: Read Actions
+sidebar_label: Read Actions
+slug: /read-actions
+sidebar_id: read-actions
 ---
 
 ---
@@ -18,7 +21,7 @@ To read a standard object, you need to specify:
 - **objectName**: to indicate which standard object you'd like to read. This should match the name of the object in the official documentation for the SaaS API.
 - **destination**:the name of the [destination](docs/destinations) that you've defined
 - **schedule**: how frequently the read should happen. This value must be a schedule in cron syntax
-  a list of fields
+- a list of fields
 
 ```yaml title="yaml"
       standardObjects:
@@ -57,7 +60,7 @@ Fields can be either be required or optional. If a field is required, then all u
 
 ### Allow users to pick from all fields
 
-If you want to give your user the option to pick from any of the fields in their Object, use optionalFieldsAuto: all. The UI component will populate a list of all the fields pulled from their object and allow them to pick which ones your app will be able to read.
+If you want to give your user the option to pick from any of the fields in their Object, use `optionalFieldsAuto: all`. The UI component will populate a list of all the fields pulled from their object and allow them to pick which ones your app will be able to read.
 
 ```yaml title="yaml"
              standardObjects:

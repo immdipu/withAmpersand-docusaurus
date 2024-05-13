@@ -1,5 +1,6 @@
 ---
 title: "Embed UI Components"
+slug: /embeddable-ui-components
 ---
 
 We offer a React library with embeddable UI components for integration set up and management.
@@ -108,8 +109,8 @@ The parameters of the component are:
 - **provider** (string): the name SaaS provider, such as "salesforce".
   consumerRef (string): the ID that your app uses to identify this end user.
 - **consumerName** (string, optional): the display name for this end user.
-- **groupRef** (string): the ID that your app uses to identify a company, team, or workspace. See group.
-- **groupName** (string, optional): the display name for this [group](/docs/glossary#group).
+- **groupRef** (string): the ID that your app uses to identify a company, team, or workspace. See [group](/docs/glossary#group).
+- **groupName** (string, optional): the display name for this group.
 - **redirectUrl** (string, optional): if provided, we will redirect to this URL once a consumer successfully connects. This can either be an absolute or relative URL.
 - **onSuccess** (function, optional): a callback function that gets invoked after a consumer successfully connects, it should have the signature `(connectionID: string) => void`.
 

@@ -14,14 +14,14 @@ amp/
 The high-level keys of `amp.yaml` are the following:
 
 - **specVersion**: the version of the amp.yaml spec used, the current version is `1.0.0`
-  integrations: the list of integrations that your users can install
+  integrations: the list of integrations that your users can install.
 - **integrations**: the list of integrations that your users can install
 
 The high-level keys of an integration are:
 
 - **name**: the name of the integration, only alphanumeric characters and dashes are allowed.
-- **provider**: the API that this integration connects to.
-  -each integration can include:
+- **provider**: the API that this integration connects to
+- each integration can include:
 
 - [Read Actions](docs/read-actions)
 - [Write Actions](docs/write-actions)
@@ -42,13 +42,3 @@ integrations:
  subscribe:
    ...
 ```
-
-:::note[🗺️ On the roadmap]
-
-&nbsp; &nbsp; &nbsp; The ability for your users to define their own sync schedules.
-
-:::
-
-### Known fields
-
-Fields can be either be required or optional. If a field is required, then all users who install this integration will need to give your app read access to that field. If a field is optional, then users can choose whether they'd like your app to read that field. For standard fields, you will specify:

@@ -1,5 +1,6 @@
 ---
 title: Subscribe Actions(Coming Soon)
+slug: /subscribe-actions
 ---
 
 A subscribe action allows your app to listen to events happening in your customer's SaaS. Whenever an event of interest happens, we will make a request to a webhook endpoint you expose to us.
@@ -25,7 +26,7 @@ For Hubspot, we support subscribe actions for the following standard objects:
 - product
 - conversation
 
-  To subscribe to a standard object, specify the following:
+To subscribe to a standard object, specify the following:
 
 - **objectName**: the name of the standard object according to the official documentation of the CRM, converted to camel case
 
