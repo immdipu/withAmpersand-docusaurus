@@ -44,6 +44,20 @@ body {
   --ifm-list-paragraph-margin: 0px;
   --ifm-list-left-padding: 2rem;
   --ifm-list-right-padding: 1rem;
+  --ifm-h1-font-size: 1.9em;
+
+
+}
+
+.markdown h1:first-child {
+  font-size: 1.9em !important;
+  font-weight: 600;
+
+}
+
+
+.markdown {
+  padding-top: 2rem;
 }
 
 .menu {
@@ -85,6 +99,7 @@ html[data-theme="dark"] {
   --ifm-background-color: #242E33;
   --ifm-code-background: #303b42;
   --prism-background-color: #303b42;
+  --ifm-hr-background-color: #3f3f3f;
 }
 
 .navbar {
@@ -135,10 +150,13 @@ p>img {
 }
 
 html[data-theme="dark"] p>img {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
+  padding-bottom: 10px;
+  max-width: 600px;
+  width: 100%;
 }
 
-.dsla-search-wrapper {
+/* .dsla-search-wrapper {
   margin-right: var(--aa-spacing);
   --aa-background-color-rgb: 24, 28, 31;
   --aa-background-color-alpha: 1;
@@ -159,8 +177,7 @@ html[data-theme="dark"] p>img {
   --docsearch-highlight-color: var(--ifm-color-primary);
 }
 
-
-pre[class*="language-"] {
+*/ pre[class*="language-"] {
   white-space: pre-wrap;
 }
 
