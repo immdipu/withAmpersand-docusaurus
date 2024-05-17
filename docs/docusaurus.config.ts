@@ -35,6 +35,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          lastVersion: "1.0",
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -90,6 +92,9 @@ const config: Config = {
           to: "https://docs.withampersand.com/reference/oauthconnect",
           label: "API Reference",
           position: "left",
+        },
+        {
+          type: "docsVersionDropdown",
         },
       ],
     },

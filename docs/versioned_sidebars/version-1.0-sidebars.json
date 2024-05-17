@@ -1,0 +1,26 @@
+{
+  "docs": [
+    "index",
+    "quick-start",
+    {
+      "type": "category",
+      "label": "Defining-integrations",
+      "link": {
+        "type": "doc",
+        "id": "defining-integrations/index"
+      },
+      "collapsed": true,
+      "items": [
+        "defining-integrations/read-actions",
+        "defining-integrations/write-actions",
+        "defining-integrations/proxy-actions",
+        "defining-integrations/subscribe-actions",
+        "defining-integrations/destinations"
+      ]
+    },
+    "deploy-integrations",
+    "embed-ui-components",
+    "supported-apis",
+    "glossary"
+  ]
+}
